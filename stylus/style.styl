@@ -4,6 +4,7 @@
 dark_grey = #333333
 light_grey = #818181
 rojo = #BD255B
+lighter_gray = #F0F0F0
 a
 	text-decoration none
 
@@ -15,6 +16,9 @@ figure
 	margin 0
 img
 	vertical-align top
+ul
+	margin 0
+	padding 0
 
 //Buttons
 .button-menu
@@ -37,6 +41,15 @@ img
 	padding 1em
 .padding-tb
 	padding 1em 0
+.left
+	float left
+.right
+	float right
+.wrap
+		width 1000px
+.round
+	border-radius 50%
+	overflow hidden
 
 .actions
 	position absolute	
@@ -89,6 +102,7 @@ img
 		margin .5em 0
 
 .playing
+	
 	&.small
 		width 20em
 .progress
@@ -126,3 +140,80 @@ img
 		position absolute
 		right 0
 		top -2px
+.input
+	border solid 1px light_grey
+	height 2.5em
+	border-radius 5px
+	padding 0 1em 0 2em
+.search-icon
+	position absolute
+	left 0.5em
+	top 0.8em
+	color light_grey
+.close-icon
+	position absolute
+	top 0.6em
+	color light_grey
+	right .5em
+	font-size 1.1em
+
+@media screen and (min-width:480px)
+
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			width auto
+
+@media screen and (min-width:1000px)
+	body
+		background lighter_gray
+	.button-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+
+	.isotipo
+		width 122px
+	.logo
+		padding 1.3em 0
+		overflow hidden
+		background white
+	.avatar
+		width 38px
+		height 38px
+	.username
+		color light_grey
+		position relative
+		top 9px
+		margin-left .5em
+		&:after
+			content ""
+			border-left 7px solid transparent
+			border-top 9px solid light_grey
+			border-right 7px solid transparent
+			display inline-block
+			margin-left 0.4em
+	.menu 
+		display block
+		background lighter_gray
+		overflow hidden
+		.item
+			float left
+			list-style none		
+		a
+			color dark_grey
+			text-transform uppercase
+			padding 1em
+			display block
+			cursor pointer
+			border-top 5px solid transparent
+			&:hover
+				border-top 5px solid light_grey
